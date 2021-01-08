@@ -1,0 +1,71 @@
+* {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("images/sunny.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: white;
+    padding: 50px;
+}
+
+#location {
+    display: block;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    outline: none;
+    width: 100%;
+    font-size: 30px;
+}
+
+#location::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#show {
+    display: block;
+    border: none;
+    margin-top: 15px;
+    background: #b92b27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    outline: none;
+    width: 100%;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#show:hover {
+    opacity: 0.9;
+}
+
+#info {
+    margin-top: 50px;
+    text-align: center;
+}
+
+p {
+
+}
+
+#temp {
+    font-size: 100px;
+    font-weight: 100;
+}
+
+#temp_adv {
+    font-size: 24px;
+}

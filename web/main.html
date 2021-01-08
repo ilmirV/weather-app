@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода</title>
+    <script src="eel.js"></script>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap">
+</head>
+<body>
+    <input type="text" id="location" placeholder="Введите название страны и города ..." required value="Нью-Йорк, США">
+    <button id="show">Узнать погоду</button>
+    <div id="info">
+        <p id="temp"></p>
+        <p id="temp_adv">
+            <span id="temp_high"></span>
+            <span id="temp_low"></span>
+        </p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        async function display_weather() {
+            let place = document.getElementById('location').value;
+            let myArray = await eel.get_weather(place)();
+            if (myArray[3] == 'Clouds') {
+                document.body.style.backgroundImage = 'url("images/clouds.jpg")';
+            }
+            //document.getElementById('info').innerHTML = res;
+            document.getElementById('temp').innerHTML = myArray[0] + '&deg;';
+            document.getElementById('temp_high').innerHTML = 'H:' + myArray[1] + '&deg;';
+            document.getElementById('temp_low').innerHTML = 'L:' + myArray[2] + '&deg;';
+        }
+        jQuery('#show').on('click', function() {
+            display_weather();
+        });
+    </script>
+</body>
+</html>
