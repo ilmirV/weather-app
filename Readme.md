@@ -1,6 +1,10 @@
 # Introduction to Flask<a name="Introduction"></a>
 ### TOPICS
-[Introduction to Flask](#Introduction)
+* [Introduction to Flask](#Introduction)
+* [Jinja2 Templates and Forms](#Jinja2)
+* [Databases in Flask](#Databases)
+* [Accounts and Authentication](#Authentication)
+* [Deploying an Application with Heroku](#Heroku)
 ## Python Flask Framework
 Flask is a popular Python framework for developing web applications. It comes with minimal built-in functionalities and requirements, making it simple to get started and flexible to use. The developer has the liberty to customize most aspects of the app, including database integration, accounts and authentication, and more.
 ## Creating Flask App Object
